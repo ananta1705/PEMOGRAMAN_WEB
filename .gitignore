@@ -34,3 +34,8 @@ yarn-error.log*
 # OS temp files
 .DS_Store
 Thumbs.db
+
+# Executables & CLI tools
+*.exe
+**/tools/
+
