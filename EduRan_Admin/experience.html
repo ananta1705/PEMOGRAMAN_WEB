@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelola Experience - Panel Pengelola BLEDERA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">ER</div>
+      EduRan
+    </div>
+    <div class="menu-section">
+      <div class="menu-label">Menu Utama</div>
+      <a href="index.html" class="nav-item">Dashboard</a>
+      <a href="experience.html" class="nav-item active">Experience</a>
+      <a href="materi.html" class="nav-item">Materi</a>
+      <a href="video.html" class="nav-item">Video & Panduan</a>
+      <a href="pengunjung.html" class="nav-item">Pengunjung</a>
+      <a href="penyelesaian.html" class="nav-item">Penyelesaian Experience</a>
+
+    </div>
+    <div class="sidebar-bottom">
+      <a href="bantuan.html" class="nav-item">Bantuan</a>
+      <a href="pengaturan.html" class="nav-item">Pengaturan</a>
+      <a href="login.html" class="nav-item">Keluar</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-breadcrumb">Panel Pengelola / Experience</div>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="notification-btn" style="text-decoration:none; color:inherit; font-size:12px; font-weight:bold; display:flex; align-items:center; justify-content:center;">
+          Notif
+          <div class="notification-dot"></div>
+        </a>
+        <div class="user-profile">
+          <div class="user-avatar">PB</div>
+          <div class="user-info">
+            <span class="user-name">Pengelola BLEDERA</span>
+            <span class="user-role">Administrator</span>
+          </div>
+          <span style="font-size:12px; color:#9ca3af;">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      
+      <!-- HEADER SECTION -->
+      <div class="page-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px;">
+        <div>
+          <h1 style="font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:8px;">Experience</h1>
+          <p style="color:var(--text-muted);">Kelola pengalaman budaya yang tersedia di BLEDERA.</p>
+        </div>
+        <a href="tambah_experience.html" class="btn-primary" style="text-decoration:none; font-size:14px; padding:12px 20px;">+ Tambah Experience</a>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar" style="display:flex; gap:16px; margin-bottom:24px;">
+        <input type="text" placeholder="Cari Experience..." style="flex:1; padding:12px 16px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; font-size:14px;">
+        <select style="padding:12px 16px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; min-width:180px; background-color:white; font-size:14px; color:var(--text-dark);">
+          <option>Semua status</option>
+          <option>Aktif</option>
+          <option>Non-aktif</option>
+        </select>
+      </div>
+
+      <!-- DATA TABLE -->
+      <div class="panel" style="overflow:hidden; margin-bottom:40px;">
+        <table style="width:100%; border-collapse:collapse; text-align:left;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background-color:#f8fafc;">
+              <th style="padding:16px 24px;">Experience</th>
+              <th style="padding:16px 24px;">Deskripsi</th>
+              <th style="padding:16px 24px;">Materi</th>
+              <th style="padding:16px 24px;">Video</th>
+              <th style="padding:16px 24px;">Status</th>
+              <th style="padding:16px 24px;">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color); transition:0.2s;">
+              <td style="padding:16px 24px; display:flex; align-items:center; gap:16px;">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=150&q=80" style="width:48px; height:48px; border-radius:8px; object-fit:cover;" alt="Image">
+                <span style="font-weight:600; font-size:15px; color:var(--text-dark);">Live Cooking</span>
+              </td>
+              <td style="padding:16px 24px; color:var(--text-muted); font-size:14px; max-width:300px; line-height:1.4;">
+                Kegiatan memasak bersama masyarakat lokal Blederan.
+              </td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">4</td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">2</td>
+              <td style="padding:16px 24px;">
+                <span class="badge badge-active">Aktif</span>
+              </td>
+              <td style="padding:16px 24px;">
+                <div style="display:flex; gap:8px;">
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none;">Edit</a>
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+                </div>
+              </td>
+            </tr>
+            <tr style="border-bottom:none; transition:0.2s;">
+              <td style="padding:16px 24px; display:flex; align-items:center; gap:16px;">
+                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=150&q=80" style="width:48px; height:48px; border-radius:8px; object-fit:cover;" alt="Image">
+                <span style="font-weight:600; font-size:15px; color:var(--text-dark);">Kampung Sayur</span>
+              </td>
+              <td style="padding:16px 24px; color:var(--text-muted); font-size:14px; max-width:300px; line-height:1.4;">
+                Mengenal pertanian dan potensi sayuran Desa Blederan.
+              </td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">3</td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">1</td>
+              <td style="padding:16px 24px;">
+                <span class="badge badge-active">Aktif</span>
+              </td>
+              <td style="padding:16px 24px;">
+                <div style="display:flex; gap:8px;">
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none;">Edit</a>
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Experience - Panel Pengelola BLEDERA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">ER</div>
+      EduRan
+    </div>
+    <div class="menu-section">
+      <div class="menu-label">Menu Utama</div>
+      <a href="index.html" class="nav-item">Dashboard</a>
+      <a href="experience.html" class="nav-item active">Experience</a>
+      <a href="materi.html" class="nav-item">Materi</a>
+      <a href="video.html" class="nav-item">Video & Panduan</a>
+      <a href="pengunjung.html" class="nav-item">Pengunjung</a>
+      <a href="penyelesaian.html" class="nav-item">Penyelesaian Experience</a>
+
+    </div>
+    <div class="sidebar-bottom">
+      <a href="bantuan.html" class="nav-item">Bantuan</a>
+      <a href="pengaturan.html" class="nav-item">Pengaturan</a>
+      <a href="login.html" class="nav-item">Keluar</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-breadcrumb">Panel Pengelola / Experience / Tambah</div>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="notification-btn" style="text-decoration:none; color:inherit; font-size:12px; font-weight:bold; display:flex; align-items:center; justify-content:center;">
+          Notif
+          <div class="notification-dot"></div>
+        </a>
+        <div class="user-profile">
+          <div class="user-avatar">PB</div>
+          <div class="user-info">
+            <span class="user-name">Pengelola BLEDERA</span>
+            <span class="user-role">Administrator</span>
+          </div>
+          <span style="font-size:12px; color:#9ca3af;">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      
+      <div class="page-header" style="margin-bottom:24px;">
+        <h1 style="font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:8px;">Tambah Experience Baru</h1>
+        <p style="color:var(--text-muted);">Masukkan detail informasi untuk pengalaman budaya baru di EduRan.</p>
+      </div>
+
+      <div class="panel" style="padding:32px;">
+        <form action="experience.html" method="GET" style="display:flex; flex-direction:column; gap:24px; max-width:600px;">
+          
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label style="font-size:14px; font-weight:600; color:var(--text-dark);">Nama Experience</label>
+            <input type="text" required placeholder="Contoh: Belajar Membatik" style="padding:14px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; font-size:14px;">
+          </div>
+          
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label style="font-size:14px; font-weight:600; color:var(--text-dark);">Deskripsi Singkat</label>
+            <textarea rows="5" required placeholder="Jelaskan secara singkat tentang kegiatan ini..." style="padding:14px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; resize:vertical; font-size:14px;"></textarea>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label style="font-size:14px; font-weight:600; color:var(--text-dark);">URL Foto Sampul</label>
+            <input type="url" placeholder="https://..." style="padding:14px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; font-size:14px;">
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <label style="font-size:14px; font-weight:600; color:var(--text-dark);">Status Awal</label>
+            <select style="padding:14px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; font-size:14px; background-color:white; width:200px;">
+              <option value="aktif">Aktif</option>
+              <option value="nonaktif">Non-aktif (Draft)</option>
+            </select>
+          </div>
+
+          <div style="display:flex; gap:16px; margin-top:16px; align-items:center;">
+            <button type="submit" class="btn-primary" style="padding:14px 24px; font-size:14px;">Simpan Data</button>
+            <a href="experience.html" class="btn-outline" style="text-decoration:none; padding:14px 24px; font-size:14px;">Batal</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

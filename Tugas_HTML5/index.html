@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda — Portal Pendataan Kependudukan</title>
+    <meta name="description" content="Selamat datang di Portal Pendataan Kependudukan. Daftarkan biodata KTP Anda secara online.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--
+    ════════════════════════════════════════════════════════════════
+    OVERLAY — ditaruh SEBELUM .app-layout agar tidak ikut
+    dihitung sebagai grid child. Diklik untuk tutup sidebar di HP.
+    position: fixed → menempel di atas semua elemen.
+    ════════════════════════════════════════════════════════════════
+    -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!--
+    ════════════════════════════════════════════════════════════════
+    .app-layout  →  CSS GRID (layout utama)
+    ────────────────────────────────────────────────────────────────
+    grid-template-columns: 250px  1fr
+                            ↑         ↑
+                         <aside>  .right-col
+    ════════════════════════════════════════════════════════════════
+    -->
+    <div class="app-layout">
+
+        <!-- ══════════════════════════════════════════════════
+             ASIDE — SIDEBAR (Kolom Kiri)
+             Tag semantik <aside> = konten pendukung / navigasi
+             Lebar tetap 250px, tinggi penuh 100vh
+        ══════════════════════════════════════════════════ -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Brand / Logo -->
+            <div class="sidebar__brand">
+                <!--
+                    SVG inline — grafis vektor tanpa file eksternal
+                    rect rx="16" = sudut bulat (border-radius pada SVG)
+                    text text-anchor="middle" = teks rata tengah
+                    circle = titik aksen warna emas di bawah teks
+                -->
+                <svg width="40" height="40" viewBox="0 0 100 100"
+                     class="sidebar__logo" role="img" aria-label="Logo KTP Portal">
+                    <rect x="5" y="5" width="90" height="90" rx="16" fill="#ffffff" fill-opacity="0.18"/>
+                    <text x="50" y="54" font-size="26" text-anchor="middle"
+                          fill="#ffffff" font-family="Inter,sans-serif" font-weight="700">KTP</text>
+                    <circle cx="50" cy="74" r="5" fill="#ffcc00"/>
+                </svg>
+                <div>
+                    <!-- span: teks inline tanpa makna semantik khusus -->
+                    <span class="sidebar__name">KTP Portal</span>
+                    <span class="sidebar__sub">Layanan Kependudukan</span>
+                </div>
+                <!-- Tombol tutup sidebar — hanya tampil di mobile -->
+                <button class="sidebar__close" onclick="toggleSidebar()" aria-label="Tutup menu">✕</button>
+            </div>
+
+            <!-- Label grup navigasi -->
+            <div class="sidebar__group-label">MENU UTAMA</div>
+
+            <!--
+                nav: elemen semantik wadah navigasi
+                ul  : daftar tak berurutan (unordered list)
+                li  : satu item daftar
+                a   : tautan ke halaman lain
+            -->
+            <nav class="sidebar__nav" aria-label="Navigasi utama">
+                <ul class="sidebar__nav-list">
+                    <!-- Item aktif = halaman yang sedang dibuka -->
+                    <li>
+                        <a href="index.html" class="sidebar__link sidebar__link--active">
+                            <span class="sidebar__icon" aria-hidden="true">🏠</span>
+                            <span>Beranda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registrasi.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">📋</span>
+                            <span>Pendaftaran KTP</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="galeri.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">🖼️</span>
+                            <span>Galeri</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="member.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">👥</span>
+                            <span>Data Member</span>
+                            <!-- Jumlah member — badge kecil di kanan -->
+                            <span class="sidebar__count">4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="kontak.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">📞</span>
+                            <span>Kontak</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__group-label">LAINNYA</div>
+
+            <nav class="sidebar__nav" aria-label="Navigasi lainnya">
+                <ul class="sidebar__nav-list">
+                    <li>
+                        <a href="jadwal.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">🗓️</span>
+                            <span>Jadwal &amp; Agenda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tentang.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">ℹ️</span>
+                            <span>Tentang Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Kaki sidebar -->
+            <div class="sidebar__footer">
+                <p class="sidebar__footer-text">Portal Kependudukan</p>
+                <span class="sidebar__footer-ver">v2.0</span>
+            </div>
+
+        </aside>
+        <!-- /aside.sidebar -->
+
+
+        <!-- ══════════════════════════════════════════════════
+             KOLOM KANAN — display: flex; flex-direction: column
+             ┌─────────────────────┐
+             │ <header>  (tetap)   │
+             ├─────────────────────┤
+             │ <main>  (flex: 1)   │ ← mengisi semua sisa ruang
+             ├─────────────────────┤
+             │ <footer> (tetap)    │ ← selalu di bawah
+             └─────────────────────┘
+        ══════════════════════════════════════════════════ -->
+        <div class="right-col">
+
+            <!-- ──────────────────────────────────────────
+                 HEADER — elemen semantik kepala halaman
+                 Berisi: tombol hamburger, judul, info
+            ────────────────────────────────────────────── -->
+            <header class="top-header">
+
+                <!-- Tombol hamburger — hanya muncul di layar HP -->
+                <button class="hamburger" id="hamburgerBtn"
+                        onclick="toggleSidebar()"
+                        aria-label="Buka/tutup menu navigasi"
+                        aria-expanded="false">
+                    <!--
+                        Tiga <span> = tiga garis ikon hamburger ☰
+                        Dibentuk dengan CSS: width, height, background
+                    -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Judul & breadcrumb halaman -->
+                <div class="top-header__title-group">
+                    <!-- h1: judul utama halaman — satu per halaman -->
+                    <h1 class="top-header__title">Portal Pendataan Kependudukan</h1>
+                    <!-- nav breadcrumb: navigasi posisi halaman saat ini -->
+                    <nav aria-label="Breadcrumb" class="top-header__breadcrumb">
+                        <span>Portal</span>
+                        <span aria-hidden="true"> › </span>
+                        <span class="top-header__breadcrumb-cur">Beranda</span>
+                    </nav>
+                </div>
+
+                <!-- Info tanggal & status layanan di kanan header -->
+                <div class="top-header__meta">
+                    <!--
+                        time: elemen semantik untuk tanggal/waktu
+                        datetime: format mesin (YYYY-MM-DD)
+                    -->
+                    <time datetime="2026-09-30" class="top-header__date">
+                        📅 Rabu, 30 September 2026
+                    </time>
+                    <span class="top-header__status">🟢 Layanan Aktif</span>
+                </div>
+
+            </header>
+            <!-- /header.top-header -->
+
+
+            <!-- ──────────────────────────────────────────
+                 MAIN — elemen semantik area konten utama
+                 flex: 1 = mengisi semua ruang tersisa
+                 overflow-y: auto = scroll jika konten panjang
+            ────────────────────────────────────────────── -->
+            <main class="main-content">
+
+                <!-- Hero Banner sambutan -->
+                <div class="hero-banner">
+                    <h2 class="hero-banner__title">Selamat Datang di Portal Informasi</h2>
+                    <p class="hero-banner__sub">
+                        Sistem pendataan kependudukan berbasis KTP elektronik yang transparan,
+                        akurat, dan mudah diakses.
+                    </p>
+                    <span class="hero-banner__badge">🏛️ Layanan 24 Jam</span>
+                </div>
+
+                <!-- Grid dua kolom: Berita + Pengumuman -->
+                <!--
+                    .card-grid: CSS Grid 2 kolom
+                    .card: komponen kotak konten (putih, bayangan, sudut bulat)
+                    .info-box: komponen kotak pengumuman sidebar
+                -->
+                <div class="card-grid">
+
+                    <!-- KOLOM KIRI: Berita & Panduan -->
+                    <div class="card">
+                        <h3 class="section-title">📰 Berita Terkini</h3>
+                        <p>
+                            <b>Pembaruan Sistem Pendaftaran:</b>
+                            Pendaftaran anggota baru kini dilakukan secara terpusat
+                            melalui portal ini. Pastikan Anda mengisi data sesuai dengan
+                            KTP elektronik (e-KTP) pada menu pendaftaran.
+                        </p>
+
+                        <h3 class="section-title mt-6">📖 Panduan Penggunaan Web</h3>
+                        <!-- ol: daftar BERURUTAN (angka 1,2,3) → cocok untuk langkah-langkah -->
+                        <ol>
+                            <li>Pilih menu <b>Pendaftaran KTP</b> untuk mengisi formulir biodata.</li>
+                            <li>Cek data pendaftar yang sudah tersimpan di menu <b>Data Member</b>.</li>
+                            <li>Kunjungi <b>Galeri</b> untuk melihat dokumentasi gambar dan video.</li>
+                            <li>Hubungi kami melalui menu <b>Kontak</b> jika ada pertanyaan.</li>
+                        </ol>
+                    </div>
+
+                    <!-- KOLOM KANAN: Pengumuman Penting -->
+                    <!-- .info-box: kotak pengumuman dengan header gradient -->
+                    <div class="info-box">
+                        <div class="info-box__header">Pengumuman Penting</div>
+                        <div class="info-box__body">
+                            <!-- ul: daftar TAK berurutan (bullet/poin) -->
+                            <ul>
+                                <li><b>Syarat:</b> Siapkan KTP Asli &amp; Fotokopi</li>
+                                <li><b>Waktu:</b> Pendaftaran Online 24 Jam</li>
+                                <li><b>Berkas:</b> Akta lahir, KK, &amp; Surat RT/RW</li>
+                                <li><b>Catatan:</b> Dilarang memalsukan data pribadi.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div><!-- /.card-grid -->
+
+            </main>
+            <!-- /main.main-content -->
+
+
+            <!-- ──────────────────────────────────────────
+                 FOOTER — elemen semantik kaki halaman
+                 Menempel di bawah karena main: flex: 1
+                 &copy; = simbol © hak cipta
+            ────────────────────────────────────────────── -->
+            <footer class="site-footer">
+                <p>&copy; 2026 <strong>Portal Pendataan Kependudukan</strong> — Tugas Pemrograman Web HTML5.</p>
+            </footer>
+            <!-- /footer.site-footer -->
+
+        </div>
+        <!-- /.right-col -->
+
+    </div>
+    <!-- /.app-layout -->
+
+
+    <!--
+    ════════════════════════════════════════════════════════════════
+    JAVASCRIPT — Hamburger Menu & Sidebar Toggle
+    ════════════════════════════════════════════════════════════════
+    Hanya beberapa baris JS murni, tanpa library eksternal.
+    -->
+    <script>
+        /**
+         * toggleSidebar()
+         * Tambah/hapus class .sidebar--open untuk animasi slide sidebar.
+         * aria-expanded memberi tahu screen reader status tombol hamburger.
+         */
+        function toggleSidebar() {
+            const sidebar   = document.getElementById('sidebar');
+            const overlay   = document.getElementById('sidebarOverlay');
+            const hamburger = document.getElementById('hamburgerBtn');
+            const isOpen    = sidebar.classList.toggle('sidebar--open');
+
+            /* Tampilkan overlay dulu, lalu fade-in via class */
+            if (isOpen) {
+                overlay.style.display = 'block';
+                requestAnimationFrame(() => overlay.classList.add('sidebar-overlay--visible'));
+            } else {
+                overlay.classList.remove('sidebar-overlay--visible');
+                /* Hapus display setelah transisi opacity selesai */
+                overlay.addEventListener('transitionend',
+                    () => { overlay.style.display = 'none'; },
+                    { once: true }
+                );
+            }
+
+            if (hamburger) hamburger.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        /**
+         * Tutup sidebar otomatis jika layar diperlebar ke atas 768px
+         * agar tidak tersangkut di state "terbuka" saat di-resize.
+         */
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                const sidebar  = document.getElementById('sidebar');
+                const overlay  = document.getElementById('sidebarOverlay');
+                sidebar.classList.remove('sidebar--open');
+                overlay.classList.remove('sidebar-overlay--visible');
+                overlay.style.display = '';
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+</body>
+</html>

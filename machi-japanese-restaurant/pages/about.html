@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MACHI - Modern Japanese Kitchen & Matcha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+<body class="bg-brand-cream text-brand-charcoal antialiased">
+    <!-- Navbar omitted for brevity but keeping basic structure for flow -->
+    <header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur-sm border-b border-brand-charcoal/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex flex-col justify-center group outline-none">
+                    <span class="font-heading font-bold text-3xl tracking-tight text-brand-charcoal">MACHI</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-sm font-medium text-brand-charcoal hover:text-brand-primary">Home</a>
+                    <a href="menu.html" class="text-sm font-medium text-brand-charcoal hover:text-brand-primary">Menu</a>
+                    <a href="about.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary py-2">About</a>
+                    <a href="promo.html" class="text-sm font-medium text-brand-charcoal hover:text-brand-primary">Promo</a>
+                    <a href="location.html" class="text-sm font-medium text-brand-charcoal hover:text-brand-primary">Location</a>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="reservation.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-primary text-white text-sm font-semibold hover:bg-brand-deep transition-all">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-20 md:py-32 overflow-hidden relative">
+            <div class="absolute inset-0 pattern-washi opacity-60"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <!-- Image -->
+                    <figure class="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                        <img src="../assets/images/about/interior.png" alt="MACHI Restaurant Interior" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+                        <div class="absolute bottom-6 right-6 w-24 h-24 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg">
+                            <span class="text-brand-primary font-heading font-bold text-xs tracking-widest text-center uppercase">Est.<br>2026</span>
+                        </div>
+                    </figure>
+                    
+                    <!-- Text -->
+                    <div>
+                        <div class="inline-flex items-center space-x-2 bg-white rounded-full px-4 py-1 mb-6 shadow-sm">
+                            <span class="text-xs font-bold tracking-wider uppercase text-brand-primary">Our Story</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-brand-charcoal mb-6">A Little Taste of Japan</h1>
+                        
+                        <div class="space-y-6 text-lg text-brand-charcoal/75 leading-relaxed border-l-2 border-brand-primary pl-6">
+                            <p>
+                                MACHI is a modern Japanese kitchen inspired by the warmth, simplicity, and comforting flavors of Japanese dining culture.
+                            </p>
+                            <p>
+                                From hearty ramen and flavorful donburi to fresh sushi and calming matcha, MACHI brings Japanese food into everyday moments. We believe that great food doesn't have to be complicated—it just needs to be made with care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-24 bg-white border-t border-brand-washi">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-brand-charcoal">The MACHI Way</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Simplicity -->
+                    <article class="p-10 rounded-2xl bg-brand-cream/40 text-center hover:bg-brand-cream transition-colors duration-300 border border-transparent hover:border-brand-washi">
+                        <div class="w-16 h-16 rounded-full bg-white mx-auto flex items-center justify-center mb-6 shadow-sm border border-brand-washi">
+                            <span class="font-heading font-bold text-2xl text-brand-primary">簡</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading mb-3">Simplicity</h3>
+                        <p class="text-brand-charcoal/70">Simple ingredients, thoughtful preparation. We let the natural flavors speak for themselves.</p>
+                    </article>
+                    
+                    <!-- Balance -->
+                    <article class="p-10 rounded-2xl bg-brand-cream/40 text-center hover:bg-brand-cream transition-colors duration-300 border border-transparent hover:border-brand-washi">
+                        <div class="w-16 h-16 rounded-full bg-white mx-auto flex items-center justify-center mb-6 shadow-sm border border-brand-washi">
+                            <span class="font-heading font-bold text-2xl text-brand-primary">和</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading mb-3">Balance</h3>
+                        <p class="text-brand-charcoal/70">A balance of flavor, texture and presentation in every single bowl we serve.</p>
+                    </article>
+                    
+                    <!-- Warmth -->
+                    <article class="p-10 rounded-2xl bg-brand-cream/40 text-center hover:bg-brand-cream transition-colors duration-300 border border-transparent hover:border-brand-washi">
+                        <div class="w-16 h-16 rounded-full bg-white mx-auto flex items-center justify-center mb-6 shadow-sm border border-brand-washi">
+                            <span class="font-heading font-bold text-2xl text-brand-primary">温</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading mb-3">Warmth</h3>
+                        <p class="text-brand-charcoal/70">Japanese food made to bring people together, creating comfortable moments everyday.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

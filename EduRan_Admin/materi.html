@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi Edukasi - Panel Pengelola BLEDERA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">ER</div>
+      EduRan
+    </div>
+    <div class="menu-section">
+      <div class="menu-label">Menu Utama</div>
+      <a href="index.html" class="nav-item">Dashboard</a>
+      <a href="experience.html" class="nav-item">Experience</a>
+      <a href="materi.html" class="nav-item active">Materi</a>
+      <a href="video.html" class="nav-item">Video & Panduan</a>
+      <a href="pengunjung.html" class="nav-item">Pengunjung</a>
+      <a href="penyelesaian.html" class="nav-item">Penyelesaian Experience</a>
+
+    </div>
+    <div class="sidebar-bottom">
+      <a href="bantuan.html" class="nav-item">Bantuan</a>
+      <a href="pengaturan.html" class="nav-item">Pengaturan</a>
+      <a href="login.html" class="nav-item">Keluar</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-breadcrumb">Panel Pengelola / Materi</div>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="notification-btn" style="text-decoration:none; color:inherit; font-size:12px; font-weight:bold; display:flex; align-items:center; justify-content:center;">
+          Notif
+          <div class="notification-dot"></div>
+        </a>
+        <div class="user-profile">
+          <div class="user-avatar">PB</div>
+          <div class="user-info">
+            <span class="user-name">Pengelola BLEDERA</span>
+            <span class="user-role">Administrator</span>
+          </div>
+          <span style="font-size:12px; color:#9ca3af;">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      
+      <!-- HEADER SECTION -->
+      <div class="page-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px;">
+        <div>
+          <h1 style="font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:8px;">Materi</h1>
+          <p style="color:var(--text-muted);">Kelola materi pembelajaran untuk setiap Experience.</p>
+        </div>
+        <a href="tambah_materi.html" class="btn-primary" style="text-decoration:none; font-size:14px; padding:12px 20px;">+ Tambah Materi</a>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar" style="display:flex; gap:16px; margin-bottom:24px;">
+        <input type="text" placeholder="Cari materi..." style="flex:1; padding:12px 16px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; font-size:14px;">
+        <select style="padding:12px 16px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; min-width:180px; background-color:white; font-size:14px; color:var(--text-dark);">
+          <option>Semua Experience</option>
+          <option>Live Cooking</option>
+          <option>Kampung Sayur</option>
+        </select>
+      </div>
+
+      <!-- DATA TABLE -->
+      <div class="panel" style="overflow:hidden; margin-bottom:40px;">
+        <table style="width:100%; border-collapse:collapse; text-align:left;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border-color); color:var(--text-muted); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background-color:#f8fafc;">
+              <th style="padding:16px 24px;">Judul Materi</th>
+              <th style="padding:16px 24px;">Experience</th>
+              <th style="padding:16px 24px;">Deskripsi</th>
+              <th style="padding:16px 24px;">Status</th>
+              <th style="padding:16px 24px;">Diperbarui</th>
+              <th style="padding:16px 24px;">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color); transition:0.2s;">
+              <td style="padding:16px 24px; display:flex; align-items:center; gap:16px;">
+                <div style="width:40px; height:40px; border-radius:8px; background-color:#eff6ff; color:#3b82f6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px;">DOC</div>
+                <span style="font-weight:600; font-size:14px; color:var(--text-dark); max-width:150px; line-height:1.4;">Mengenal Bahan Lokal</span>
+              </td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">Live Cooking</td>
+              <td style="padding:16px 24px; color:var(--text-muted); font-size:13px; max-width:250px; line-height:1.4;">
+                Panduan memilih bahan dan rempah lokal.
+              </td>
+              <td style="padding:16px 24px;">
+                <span class="badge badge-active">Terbit</span>
+              </td>
+              <td style="padding:16px 24px; font-size:13px; color:var(--text-muted);">01 Okt 2026</td>
+              <td style="padding:16px 24px;">
+                <div style="display:flex; gap:8px;">
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none;">Edit</a>
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+                </div>
+              </td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color); transition:0.2s;">
+              <td style="padding:16px 24px; display:flex; align-items:center; gap:16px;">
+                <div style="width:40px; height:40px; border-radius:8px; background-color:#eff6ff; color:#3b82f6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px;">DOC</div>
+                <span style="font-weight:600; font-size:14px; color:var(--text-dark); max-width:150px; line-height:1.4;">Teknik Memasak Tradisional</span>
+              </td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">Live Cooking</td>
+              <td style="padding:16px 24px; color:var(--text-muted); font-size:13px; max-width:250px; line-height:1.4;">
+                Langkah dasar pengolahan makanan khas.
+              </td>
+              <td style="padding:16px 24px;">
+                <span class="badge badge-active">Terbit</span>
+              </td>
+              <td style="padding:16px 24px; font-size:13px; color:var(--text-muted);">30 Sep 2026</td>
+              <td style="padding:16px 24px;">
+                <div style="display:flex; gap:8px;">
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none;">Edit</a>
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+                </div>
+              </td>
+            </tr>
+            <tr style="border-bottom:none; transition:0.2s;">
+              <td style="padding:16px 24px; display:flex; align-items:center; gap:16px;">
+                <div style="width:40px; height:40px; border-radius:8px; background-color:#eff6ff; color:#3b82f6; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px;">DOC</div>
+                <span style="font-weight:600; font-size:14px; color:var(--text-dark); max-width:150px; line-height:1.4;">Jenis Sayuran Desa</span>
+              </td>
+              <td style="padding:16px 24px; font-size:14px; color:var(--text-dark); font-weight:500;">Kampung Sayur</td>
+              <td style="padding:16px 24px; color:var(--text-muted); font-size:13px; max-width:250px; line-height:1.4;">
+                Pengenalan sayuran yang tumbuh di Blederan.
+              </td>
+              <td style="padding:16px 24px;">
+                <span class="badge badge-draft">Draf</span>
+              </td>
+              <td style="padding:16px 24px; font-size:13px; color:var(--text-muted);">28 Sep 2026</td>
+              <td style="padding:16px 24px;">
+                <div style="display:flex; gap:8px;">
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none;">Edit</a>
+                  <a href="#" class="btn-outline" style="padding:6px 12px; font-size:12px; text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

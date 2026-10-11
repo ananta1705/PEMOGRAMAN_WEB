@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran — Portal Pendataan Kependudukan</title>
+    <meta name="description" content="Formulir pendaftaran biodata KTP digital. Isi data sesuai e-KTP Anda.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <div class="app-layout">
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__brand">
+                <svg width="40" height="40" viewBox="0 0 100 100"
+                     class="sidebar__logo" role="img" aria-label="Logo KTP Portal">
+                    <rect x="5" y="5" width="90" height="90" rx="16" fill="#ffffff" fill-opacity="0.18"/>
+                    <text x="50" y="54" font-size="26" text-anchor="middle"
+                          fill="#ffffff" font-family="Inter,sans-serif" font-weight="700">KTP</text>
+                    <circle cx="50" cy="74" r="5" fill="#ffcc00"/>
+                </svg>
+                <div>
+                    <span class="sidebar__name">KTP Portal</span>
+                    <span class="sidebar__sub">Layanan Kependudukan</span>
+                </div>
+                <button class="sidebar__close" onclick="toggleSidebar()" aria-label="Tutup menu">✕</button>
+            </div>
+
+            <div class="sidebar__group-label">MENU UTAMA</div>
+
+            <nav class="sidebar__nav" aria-label="Navigasi utama">
+                <ul class="sidebar__nav-list">
+                    <li>
+                        <a href="index.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">🏠</span>
+                            <span>Beranda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registrasi.html" class="sidebar__link sidebar__link--active">
+                            <span class="sidebar__icon" aria-hidden="true">📋</span>
+                            <span>Pendaftaran KTP</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="galeri.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">🖼️</span>
+                            <span>Galeri</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="member.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">👥</span>
+                            <span>Data Member</span>
+                            <span class="sidebar__count">4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="kontak.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">📞</span>
+                            <span>Kontak</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__group-label">LAINNYA</div>
+
+            <nav class="sidebar__nav" aria-label="Navigasi lainnya">
+                <ul class="sidebar__nav-list">
+                    <li>
+                        <a href="jadwal.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">🗓️</span>
+                            <span>Jadwal &amp; Agenda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tentang.html" class="sidebar__link">
+                            <span class="sidebar__icon" aria-hidden="true">ℹ️</span>
+                            <span>Tentang Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__footer">
+                <p class="sidebar__footer-text">Portal Kependudukan</p>
+                <span class="sidebar__footer-ver">v2.0</span>
+            </div>
+        </aside>
+
+        <div class="right-col">
+
+            <header class="top-header">
+                <button class="hamburger" id="hamburgerBtn"
+                        onclick="toggleSidebar()"
+                        aria-label="Buka/tutup menu navigasi"
+                        aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <div class="top-header__title-group">
+                    <h1 class="top-header__title">Portal Pendataan Kependudukan</h1>
+                    <nav aria-label="Breadcrumb" class="top-header__breadcrumb">
+                        <span>Portal</span>
+                        <span aria-hidden="true"> › </span>
+                        <span class="top-header__breadcrumb-cur">Pendaftaran</span>
+                    </nav>
+                </div>
+
+                <div class="top-header__meta">
+                    <time datetime="2026-09-30" class="top-header__date">
+                        📅 Rabu, 30 September 2026
+                    </time>
+                    <span class="top-header__status">🟢 Layanan Aktif</span>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <!-- h2: judul bagian konten (rata tengah via page-title) -->
+                <h2 class="page-title">Formulir Pendaftaran Biodata KTP</h2>
+
+                <!-- form-wrapper: kotak kartu pembungkus formulir -->
+                <div class="form-wrapper">
+                    <div class="form-title">Formulir Pendaftaran (Biodata KTP)</div>
+
+                    <form action="member.html" method="get">
+                        <!-- NIK -->
+                        <div class="form-row">
+                            <label class="form-label" for="nik">NIK</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <input type="number" id="nik" name="nik" class="input-lg" maxlength="16" placeholder="Masukkan 16 digit NIK">
+                            </div>
+                        </div>
+
+                        <!-- Nama Lengkap -->
+                        <div class="form-row">
+                            <label class="form-label" for="nama">Nama Lengkap</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <input type="text" id="nama" name="nama" class="input-lg" placeholder="Sesuai KTP">
+                            </div>
+                        </div>
+
+                        <!-- Tempat / Tanggal Lahir -->
+                        <div class="form-row">
+                            <label class="form-label" for="tempat_lahir">Tempat / Tgl Lahir</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <div class="input-inline-group">
+                                    <input type="text" id="tempat_lahir" name="tempat_lahir" class="input-md" placeholder="Tempat Lahir">
+                                    <span class="sep">/</span>
+                                    <input type="date" name="tgl_lahir" class="input-date">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jenis Kelamin -->
+                        <div class="form-row">
+                            <label class="form-label">Jenis Kelamin</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <div class="radio-group">
+                                    <label><input type="radio" name="jk" value="Laki-laki"> Laki-laki</label>
+                                    <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Golongan Darah -->
+                        <div class="form-row">
+                            <label class="form-label" for="gol_darah">Golongan Darah</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <select id="gol_darah" name="gol_darah" style="width:120px">
+                                    <option value="-">-</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Alamat -->
+                        <div class="form-row">
+                            <label class="form-label" for="alamat">Alamat</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- RT / RW -->
+                        <div class="form-row">
+                            <label class="form-label" for="rt">RT / RW</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <div class="input-inline-group">
+                                    <input type="text" id="rt" name="rt" class="input-sm" placeholder="RT">
+                                    <span class="sep">/</span>
+                                    <input type="text" name="rw" class="input-sm" placeholder="RW">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kelurahan / Desa -->
+                        <div class="form-row">
+                            <label class="form-label" for="kel">Kel / Desa</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <input type="text" id="kel" name="kel" class="input-lg">
+                            </div>
+                        </div>
+
+                        <!-- Kecamatan -->
+                        <div class="form-row">
+                            <label class="form-label" for="kec">Kecamatan</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <input type="text" id="kec" name="kec" class="input-lg">
+                            </div>
+                        </div>
+
+                        <!-- Agama -->
+                        <div class="form-row">
+                            <label class="form-label" for="agama">Agama</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <select id="agama" name="agama" style="width:180px">
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Buddha">Buddha</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Status Perkawinan -->
+                        <div class="form-row">
+                            <label class="form-label" for="status">Status Perkawinan</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <select id="status" name="status" style="width:200px">
+                                    <option value="Belum Kawin">Belum Kawin</option>
+                                    <option value="Kawin">Kawin</option>
+                                    <option value="Cerai Hidup">Cerai Hidup</option>
+                                    <option value="Cerai Mati">Cerai Mati</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Pekerjaan -->
+                        <div class="form-row">
+                            <label class="form-label" for="pekerjaan">Pekerjaan</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <input type="text" id="pekerjaan" name="pekerjaan" class="input-lg" placeholder="Masukkan pekerjaan">
+                            </div>
+                        </div>
+
+                        <!-- Berlaku Hingga -->
+                        <div class="form-row">
+                            <label class="form-label" for="berlaku">Berlaku Hingga</label>
+                            <span class="form-sep">:</span>
+                            <div class="form-field">
+                                <input type="text" id="berlaku" name="berlaku" class="input-lg" value="SEUMUR HIDUP" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" value="💾 Simpan Pendaftaran">
+                            <input type="reset"  value="✖ Bersihkan Form">
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+            <footer class="site-footer">
+                <p>&copy; 2026 Portal Pendataan Kependudukan. Tugas Pemrograman Web HTML5.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar   = document.getElementById('sidebar');
+            const overlay   = document.getElementById('sidebarOverlay');
+            const hamburger = document.getElementById('hamburgerBtn');
+            const isOpen    = sidebar.classList.toggle('sidebar--open');
+
+            if (isOpen) {
+                overlay.style.display = 'block';
+                requestAnimationFrame(() => overlay.classList.add('sidebar-overlay--visible'));
+            } else {
+                overlay.classList.remove('sidebar-overlay--visible');
+                overlay.addEventListener('transitionend',
+                    () => { overlay.style.display = 'none'; },
+                    { once: true }
+                );
+            }
+            if (hamburger) hamburger.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                const sidebar  = document.getElementById('sidebar');
+                const overlay  = document.getElementById('sidebarOverlay');
+                sidebar.classList.remove('sidebar--open');
+                overlay.classList.remove('sidebar-overlay--visible');
+                overlay.style.display = '';
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>

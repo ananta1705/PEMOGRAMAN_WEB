@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri — Portal Pendataan Kependudukan</title>
+    <meta name="description" content="Galeri foto dan video dokumentasi kegiatan layanan pendataan kependudukan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <div class="app-layout">
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__brand">
+                <svg width="40" height="40" viewBox="0 0 100 100" class="sidebar__logo" role="img" aria-label="Logo KTP Portal">
+                    <rect x="5" y="5" width="90" height="90" rx="16" fill="#ffffff" fill-opacity="0.18"/>
+                    <text x="50" y="54" font-size="26" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-weight="700">KTP</text>
+                    <circle cx="50" cy="74" r="5" fill="#ffcc00"/>
+                </svg>
+                <div>
+                    <span class="sidebar__name">KTP Portal</span>
+                    <span class="sidebar__sub">Layanan Kependudukan</span>
+                </div>
+                <button class="sidebar__close" onclick="toggleSidebar()" aria-label="Tutup menu">✕</button>
+            </div>
+
+            <div class="sidebar__group-label">MENU UTAMA</div>
+
+            <nav class="sidebar__nav" aria-label="Navigasi utama">
+                <ul class="sidebar__nav-list">
+                    <li><a href="index.html" class="sidebar__link"><span class="sidebar__icon" aria-hidden="true">🏠</span><span>Beranda</span></a></li>
+                    <li><a href="registrasi.html" class="sidebar__link"><span class="sidebar__icon" aria-hidden="true">📋</span><span>Pendaftaran KTP</span></a></li>
+                    <li><a href="galeri.html" class="sidebar__link sidebar__link--active"><span class="sidebar__icon" aria-hidden="true">🖼️</span><span>Galeri</span></a></li>
+                    <li><a href="member.html" class="sidebar__link"><span class="sidebar__icon" aria-hidden="true">👥</span><span>Data Member</span><span class="sidebar__count">4</span></a></li>
+                    <li><a href="kontak.html" class="sidebar__link"><span class="sidebar__icon" aria-hidden="true">📞</span><span>Kontak</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__group-label">LAINNYA</div>
+
+            <nav class="sidebar__nav" aria-label="Navigasi lainnya">
+                <ul class="sidebar__nav-list">
+                    <li><a href="jadwal.html" class="sidebar__link"><span class="sidebar__icon" aria-hidden="true">🗓️</span><span>Jadwal &amp; Agenda</span></a></li>
+                    <li><a href="tentang.html" class="sidebar__link"><span class="sidebar__icon" aria-hidden="true">ℹ️</span><span>Tentang Portal</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__footer">
+                <p class="sidebar__footer-text">Portal Kependudukan</p>
+                <span class="sidebar__footer-ver">v2.0</span>
+            </div>
+        </aside>
+
+        <div class="right-col">
+            <header class="top-header">
+                <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Buka/tutup menu navigasi" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="top-header__title-group">
+                    <h1 class="top-header__title">Portal Pendataan Kependudukan</h1>
+                    <nav aria-label="Breadcrumb" class="top-header__breadcrumb">
+                        <span>Portal</span><span aria-hidden="true"> › </span><span class="top-header__breadcrumb-cur">Galeri</span>
+                    </nav>
+                </div>
+                <div class="top-header__meta">
+                    <time datetime="2026-09-30" class="top-header__date">📅 Rabu, 30 September 2026</time>
+                    <span class="top-header__status">🟢 Layanan Aktif</span>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <h2 class="page-title">Galeri Gambar &amp; Video</h2>
+
+                <div class="gallery-section">
+                    <span class="gallery-label">📷 Galeri Foto</span>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700" alt="Kegiatan Pendaftaran KTP">
+                            <div class="gallery-item__caption">📌 Kegiatan Pendaftaran</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700" alt="Kantor Layanan Kependudukan">
+                            <div class="gallery-item__caption">🏢 Kantor Layanan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section">
+                    <span class="gallery-label">🎬 Galeri Video</span>
+                    <div class="gallery-video">
+                        <h3 class="gallery-video__title">Video Pengenalan Layanan</h3>
+                        <video controls>
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Maaf, browser Anda tidak mendukung pemutaran video HTML5.
+                        </video>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="site-footer">
+                <p>&copy; 2026 Portal Pendataan Kependudukan. Tugas Pemrograman Web HTML5.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar   = document.getElementById('sidebar');
+            const overlay   = document.getElementById('sidebarOverlay');
+            const hamburger = document.getElementById('hamburgerBtn');
+            const isOpen    = sidebar.classList.toggle('sidebar--open');
+
+            if (isOpen) {
+                overlay.style.display = 'block';
+                requestAnimationFrame(() => overlay.classList.add('sidebar-overlay--visible'));
+            } else {
+                overlay.classList.remove('sidebar-overlay--visible');
+                overlay.addEventListener('transitionend',
+                    () => { overlay.style.display = 'none'; },
+                    { once: true }
+                );
+            }
+            if (hamburger) hamburger.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                const sidebar  = document.getElementById('sidebar');
+                const overlay  = document.getElementById('sidebarOverlay');
+                sidebar.classList.remove('sidebar--open');
+                overlay.classList.remove('sidebar-overlay--visible');
+                overlay.style.display = '';
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>

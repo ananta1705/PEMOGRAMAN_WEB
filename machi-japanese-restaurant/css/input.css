@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #D92D20;
+  --color-brand-deep: #A61B16;
+  --color-brand-cream: #FFF8EC;
+  --color-brand-washi: #F5EBDD;
+  --color-brand-charcoal: #1F1B18;
+  --color-brand-matcha: #647A45;
+  --color-brand-wood: #6B4226;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Custom Japanese Patterns & Textures */
+.pattern-washi {
+  background-color: var(--color-brand-washi);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+.pattern-seigaiha {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23d92d20' fill-opacity='1'%3E%3Cpath d='M0 100a49.9 49.9 0 0 1 14.75-35.28 50.43 50.43 0 0 1 48.95-12.1 49.9 49.9 0 0 0-14.75 35.28H0zm100 0a49.9 49.9 0 0 1-14.75-35.28 50.43 50.43 0 0 1-48.95-12.1 49.9 49.9 0 0 0 14.75 35.28h48.95zM50 50a49.9 49.9 0 0 1 14.75-35.28 50.43 50.43 0 0 1 48.95-12.1 49.9 49.9 0 0 0-14.75 35.28H50z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+.bg-waves-large {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 100 100'%3E%3Cg fill='%231F1B18' fill-opacity='0.04'%3E%3Cpath d='M0 100a49.9 49.9 0 0 1 14.75-35.28 50.43 50.43 0 0 1 48.95-12.1 49.9 49.9 0 0 0-14.75 35.28H0zm100 0a49.9 49.9 0 0 1-14.75-35.28 50.43 50.43 0 0 1-48.95-12.1 49.9 49.9 0 0 0 14.75 35.28h48.95zM50 50a49.9 49.9 0 0 1 14.75-35.28 50.43 50.43 0 0 1 48.95-12.1 49.9 49.9 0 0 0-14.75 35.28H50z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 150px 150px;
+  background-position: bottom center;
+  /* Fade out at the top */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
+}
+
+/* Authentic Kumo (E-gasumi / Traditional Japanese Mist) */
+.decor-mist {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect x='15' y='10' width='65' height='6' rx='3' fill='%23D92D20'/%3E%3Crect x='35' y='22' width='55' height='6' rx='3' fill='%23D92D20'/%3E%3Crect x='5' y='34' width='80' height='6' rx='3' fill='%23D92D20'/%3E%3Crect x='25' y='46' width='45' height='6' rx='3' fill='%23D92D20'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.decor-mist-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect x='15' y='10' width='65' height='6' rx='3' fill='%23FFF8EC'/%3E%3Crect x='35' y='22' width='55' height='6' rx='3' fill='%23FFF8EC'/%3E%3Crect x='5' y='34' width='80' height='6' rx='3' fill='%23FFF8EC'/%3E%3Crect x='25' y='46' width='45' height='6' rx='3' fill='%23FFF8EC'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Corner Concentric Seigaiha (Like the top left reference) */
+.decor-corner-seigaiha {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg stroke='%23D92D20' stroke-width='6' fill='none'%3E%3Ccircle cx='0' cy='0' r='15'/%3E%3Ccircle cx='0' cy='0' r='30'/%3E%3Ccircle cx='0' cy='0' r='45'/%3E%3Ccircle cx='0' cy='0' r='60'/%3E%3Ccircle cx='0' cy='0' r='75'/%3E%3Ccircle cx='0' cy='0' r='90'/%3E%3Ccircle cx='0' cy='0' r='105'/%3E%3Ccircle cx='0' cy='0' r='120'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Noren (Japanese Curtain) */
+.decor-noren {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Crect x='0' y='0' width='120' height='4' fill='%231F1B18'/%3E%3Crect x='4' y='4' width='34' height='45' fill='%231F1B18'/%3E%3Crect x='43' y='4' width='34' height='45' fill='%231F1B18'/%3E%3Crect x='82' y='4' width='34' height='45' fill='%231F1B18'/%3E%3Ctext x='21' y='32' fill='%23FFF8EC' font-size='16' font-family='sans-serif' font-weight='bold' text-anchor='middle'%3Eラ%3C/text%3E%3Ctext x='60' y='32' fill='%23FFF8EC' font-size='16' font-family='sans-serif' font-weight='bold' text-anchor='middle'%3Eー%3C/text%3E%3Ctext x='99' y='32' fill='%23FFF8EC' font-size='16' font-family='sans-serif' font-weight='bold' text-anchor='middle'%3Eメ%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Authentic Chochin (Lantern) with ribs and Kanji */
+.decor-lantern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 80'%3E%3Crect x='15' y='5' width='20' height='5' fill='%231F1B18'/%3E%3Crect x='15' y='70' width='20' height='5' fill='%231F1B18'/%3E%3Cpath d='M25,0 L25,5' stroke='%231F1B18' stroke-width='2'/%3E%3Cpath d='M5,37.5 C5,15 12,10 25,10 C38,10 45,15 45,37.5 C45,60 38,70 25,70 C12,70 5,60 5,37.5 Z' fill='%23FFF8EC' stroke='%231F1B18' stroke-width='2'/%3E%3Cpath d='M6,25 Q25,30 44,25' fill='none' stroke='%231F1B18' stroke-width='1.5' opacity='0.4'/%3E%3Cpath d='M5.5,37.5 Q25,40 44.5,37.5' fill='none' stroke='%231F1B18' stroke-width='1.5' opacity='0.4'/%3E%3Cpath d='M6,50 Q25,55 44,50' fill='none' stroke='%231F1B18' stroke-width='1.5' opacity='0.4'/%3E%3Ctext x='25' y='46' fill='%23D92D20' font-size='22' font-family='serif' font-weight='bold' text-anchor='middle'%3E祭%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Asanoha Pattern */
+.pattern-asanoha {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath stroke='%23D92D20' stroke-width='1' fill='none' d='M0,20 L20,0 L40,20 L20,40 Z M20,0 L20,40 M0,20 L40,20 M10,10 L30,30 M10,30 L30,10'/%3E%3C/svg%3E");
+}
+
+/* Subtle Geometric Pattern */
+.pattern-geometric {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect width='10' height='10' fill='%236B4226' fill-opacity='1'/%3E%3Crect x='10' y='10' width='10' height='10' fill='%236B4226' fill-opacity='1'/%3E%3C/svg%3E");
+}
+
+/* Divider Waves */
+.divider-waves {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath fill='%23FFF8EC' d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25'/%3E%3Cpath fill='%23FFF8EC' d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5'/%3E%3Cpath fill='%23FFF8EC' d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text-stroke-japanese {
+  -webkit-text-stroke: 1px var(--color-brand-primary);
+  color: transparent;
+  opacity: 0.1;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-charcoal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Base focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Panel Pengelola BLEDERA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">ER</div>
+      EduRan
+    </div>
+    <div class="menu-section">
+      <div class="menu-label">Menu Utama</div>
+      <a href="index.html" class="nav-item active">
+        Dashboard
+      </a>
+      <a href="experience.html" class="nav-item ">
+        Experience
+      </a>
+      <a href="materi.html" class="nav-item ">
+        Materi
+      </a>
+      <a href="video.html" class="nav-item ">
+        Video & Panduan
+      </a>
+      <a href="pengunjung.html" class="nav-item ">
+        Pengunjung
+      </a>
+      <a href="penyelesaian.html" class="nav-item ">
+        Penyelesaian Experience
+      </a>
+
+    </div>
+    <div class="sidebar-bottom">
+      <a href="bantuan.html" class="nav-item">Bantuan</a>
+      <a href="pengaturan.html" class="nav-item">Pengaturan</a>
+      <a href="login.html" class="nav-item">Keluar</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-breadcrumb">Panel Pengelola / Dashboard</div>
+        <div class="topbar-title">Dashboard</div>
+      </div>
+      
+      <div class="topbar-right">
+        <button class="notification-btn" aria-label="Lihat Notifikasi" style="font-weight:bold; font-size:12px;">
+          Notif
+          <div class="notification-dot"></div>
+        </button>
+        <button class="user-profile" aria-label="Menu Pengguna">
+          <div class="user-avatar">PB</div>
+          <div class="user-info">
+            <span class="user-name">Pengelola BLEDERA</span>
+            <span class="user-role">Administrator</span>
+          </div>
+          <span style="font-size:12px; color:#9ca3af;">▼</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="content-wrapper">
+
+      <!-- WELCOME BANNER -->
+      <div class="welcome-banner">
+        <div class="welcome-date">RABU, 02 OKTOBER 2026</div>
+        <h1 class="welcome-title">Selamat datang di Panel Pengelola BLEDERA</h1>
+        <p class="welcome-subtitle">Pantau kegiatan hari ini dan kelola pengalaman budaya Desa Blederan dari satu tempat.</p>
+      </div>
+
+      <!-- STATS GRID -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Total Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Experience Aktif</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">128</div>
+          <div class="stat-label">Total Pengunjung</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">94</div>
+          <div class="stat-label">Experience Selesai</div>
+        </div>
+
+      </div>
+
+      <!-- EXPERIENCE AKTIF -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <h2>Experience Aktif</h2>
+            <p>Konten yang sedang tersedia untuk pengunjung.</p>
+          </div>
+          <button class="btn-primary">Tambah Experience</button>
+        </div>
+        <div class="experience-list">
+          <div class="experience-item">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=150&q=80" alt="Live Cooking" class="exp-img">
+            <div class="exp-content">
+              <div class="exp-header">
+                <span class="exp-title">Live Cooking</span>
+                <span class="badge badge-active">Aktif</span>
+              </div>
+              <div class="exp-desc">Kegiatan memasak bersama masyarakat lokal Blederan.</div>
+              <div class="exp-meta">
+                <span>4 Materi</span>
+                <span>2 Video</span>
+              </div>
+            </div>
+            <button class="btn-outline">Kelola</button>
+          </div>
+          
+          <div class="experience-item">
+            <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=150&q=80" alt="Kampung Sayur" class="exp-img">
+            <div class="exp-content">
+              <div class="exp-header">
+                <span class="exp-title">Kampung Sayur</span>
+                <span class="badge badge-active">Aktif</span>
+              </div>
+              <div class="exp-desc">Mengenal pertanian dan potensi sayuran Desa Blederan.</div>
+              <div class="exp-meta">
+                <span>3 Materi</span>
+                <span>1 Video</span>
+              </div>
+            </div>
+            <button class="btn-outline">Kelola</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AKTIVITAS TERBARU -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <h2>Aktivitas Terbaru</h2>
+            <p>Pembaruan operasional hari ini.</p>
+          </div>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="act-avatar">BR</div>
+            <div class="act-content">
+              <div class="act-title"><strong>Balqies</strong> menyelesaikan Live Cooking</div>
+              <div class="act-time">10 menit lalu</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="act-avatar">VD</div>
+            <div class="act-content">
+              <div class="act-title">Video panduan diperbarui</div>
+              <div class="act-time">1 jam lalu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

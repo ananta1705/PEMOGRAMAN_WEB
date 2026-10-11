@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video & Panduan - Panel Pengelola BLEDERA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">ER</div>
+      EduRan
+    </div>
+    <div class="menu-section">
+      <div class="menu-label">Menu Utama</div>
+      <a href="index.html" class="nav-item">Dashboard</a>
+      <a href="experience.html" class="nav-item">Experience</a>
+      <a href="materi.html" class="nav-item">Materi</a>
+      <a href="video.html" class="nav-item active">Video & Panduan</a>
+      <a href="pengunjung.html" class="nav-item">Pengunjung</a>
+      <a href="penyelesaian.html" class="nav-item">Penyelesaian Experience</a>
+
+    </div>
+    <div class="sidebar-bottom">
+      <a href="bantuan.html" class="nav-item">Bantuan</a>
+      <a href="pengaturan.html" class="nav-item">Pengaturan</a>
+      <a href="login.html" class="nav-item">Keluar</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-breadcrumb">Panel Pengelola / Video & Panduan</div>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="notification-btn" style="text-decoration:none; color:inherit; font-size:12px; font-weight:bold; display:flex; align-items:center; justify-content:center;">
+          Notif
+          <div class="notification-dot"></div>
+        </a>
+        <div class="user-profile">
+          <div class="user-avatar">PB</div>
+          <div class="user-info">
+            <span class="user-name">Pengelola BLEDERA</span>
+            <span class="user-role">Administrator</span>
+          </div>
+          <span style="font-size:12px; color:#9ca3af;">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      
+      <!-- HEADER SECTION -->
+      <div class="page-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px;">
+        <div>
+          <h1 style="font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:8px;">Video & Panduan</h1>
+          <p style="color:var(--text-muted);">Kelola video dan panduan yang digunakan dalam Experience.</p>
+        </div>
+        <a href="tambah_video.html" class="btn-primary" style="text-decoration:none; font-size:14px; padding:12px 20px;">+ Tambah Video</a>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar" style="display:flex; gap:16px; margin-bottom:24px;">
+        <input type="text" placeholder="Cari video..." style="flex:1; padding:12px 16px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; font-size:14px;">
+        <select style="padding:12px 16px; border:1px solid var(--border-color); border-radius:8px; outline:none; font-family:inherit; min-width:180px; background-color:white; font-size:14px; color:var(--text-dark);">
+          <option>Semua Experience</option>
+          <option>Live Cooking</option>
+          <option>Kampung Sayur</option>
+        </select>
+      </div>
+
+      <!-- VIDEO GRID -->
+      <div class="video-grid">
+        
+        <!-- CARD 1 -->
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none; position:absolute; top:0; left:0;"></iframe>
+            <div class="video-badge" style="z-index: 10;">Aktif</div>
+          </div>
+          <div class="video-content">
+            <div class="video-category">LIVE COOKING</div>
+            <div class="video-title">Persiapan Live Cooking</div>
+            <div class="video-desc">Panduan menyiapkan bahan sebelum kegiatan.</div>
+          </div>
+          <div class="video-footer">
+            <a href="#" class="btn-outline" style="text-decoration:none;">Edit</a>
+            <a href="#" class="btn-outline" style="text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border:none; position:absolute; top:0; left:0;"></iframe>
+            <div class="video-badge" style="z-index: 10;">Aktif</div>
+          </div>
+          <div class="video-content">
+            <div class="video-category">KAMPUNG SAYUR</div>
+            <div class="video-title">Mengenal Kebun Sayur</div>
+            <div class="video-desc">Panduan singkat sebelum mengunjungi kebun.</div>
+          </div>
+          <div class="video-footer">
+            <a href="#" class="btn-outline" style="text-decoration:none;">Edit</a>
+            <a href="#" class="btn-outline" style="text-decoration:none; color:#dc2626; border-color:#fca5a5;">Hapus</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
