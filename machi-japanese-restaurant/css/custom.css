@@ -19,7 +19,8 @@
    1. VARIABEL CSS & TIPOGRAFI
    ========================================================================== */
 :root {
-  --color-washi: #FFF4EA;
+  color-scheme: light;
+  --color-washi: #FFFFFF; /* Mengubah warna tema dasar washi menjadi warna putih bersih */
   --color-sumi: #1A1A1A;
   --color-aka: #E8401C;
   --color-aka-deep: #B5300C;
@@ -31,6 +32,10 @@
   --color-sakura: #F6C6D0;
   --color-kin: #C9A24B;
 }
+
+/* ==========================================================================
+   PENGATURAN TEMA WARNA PUTIH (WHITE / LIGHT THEME)
+   ========================================================================== */
 
 html {
   scroll-behavior: smooth;
@@ -51,11 +56,11 @@ html {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFF4EA;
+  background: #FFFFFF;
 }
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
-    background: #14110F;
+    background: #FFFFFF;
   }
 }
 ::-webkit-scrollbar-thumb {
